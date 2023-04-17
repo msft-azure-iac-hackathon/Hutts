@@ -32,7 +32,7 @@ jobs:
       Sandbox_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Sandbox_MG_Resource_Id }}
     secrets: inherit
 
-custom-rbac-role-definitions:
+  custom-rbac-role-definitions:
     uses: ./.github/workflows/3-custom-rbac-role-definitions.yml
     needs: process-management-groups
     with:
