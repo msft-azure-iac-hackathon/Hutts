@@ -4,24 +4,20 @@
     "name": "Hutts",
     "children": [
         {
-            "id": "0f4c041a-80f9-4e85-9bd5-fc53a10f9b2d",
+            "id": "2a35293d-6fa9-4c16-8d25-01db2cb79128",
             "type": "managementGroup",
             "name": "Platform",
             "children": [
                 {
-                    "id": "0f4c041a-80f9-4e85-9bd5-fc53a10f9b45",
+                    "id": "70a92e02-4885-4f4c-94f1-a615c8609d39",
                     "type": "managementGroup",
                     "name": "Connectivity",
                     "children": [
-                        {
-                            "id": "a1c49950-1900-406e-8f64-09ab4e0fc86a",
-                            "type": "subscription",
-                            "name": "Connectivity"
-                        }
+
                     ]
                 },
                 {
-                    "id": "0f4c041a-80f9-4e85-9bd4-fc53a10f8b1d",
+                    "id": "b1030186-877f-4650-baf6-40dba0b8d194",
                     "type": "managementGroup",
                     "name": "Identity",
                     "children": [
@@ -29,7 +25,7 @@
                     ]
                 },
                 {
-                    "id": "0f4c041a-80f9-4e85-9bd5-fc53a10f9875",
+                    "id": "dff764af-397c-49c2-b3f1-a9c4d3021be3",
                     "type": "managementGroup",
                     "name": "Management",
                     "children": [
@@ -38,18 +34,18 @@
             ]
         },
         {
-            "id": "0f4c041a-80f9-4e85-9bd5-fc53a10f9be0",
+            "id": "709c1f1a-3f29-4a47-afd1-4270e3466328",
             "type": "managementGroup",
             "name": "Landing Zones",
             "children": [
                 {
-                    "id": "0f4c041a-80f9-4e85-9bd5-fc53a10f9943",
+                    "id": "d2d14a45-6ee9-4126-b956-8331c215f56a",
                     "type": "managementGroup",
                     "name": "Corp",
                     "children": []
                 },
                 {
-                    "id": "cc67d716-e695-45e4-bdd2-0d6fd5373d99",
+                    "id": "3ababe51-4e02-4552-b376-8be3a3850f29",
                     "type": "managementGroup",
                     "name": "Online",
                     "children": []
@@ -57,13 +53,13 @@
             ]
         },
         {
-            "id": "b2b8b176-30c1-4bbd-a33d-542bc080c4d9",
+            "id": "8024928d-3a01-4396-a749-36a12d450453",
             "type": "managementGroup",
             "name": "Decommisioned",
             "children": []
         },
         {
-            "id": "7b92f3d7-993a-482c-b115-65114f0f6b38",
+            "id": "9099d402-3e99-4c98-acf1-0c95079736f8",
             "type": "managementGroup",
             "name": "Sandbox",
             "children": []
