@@ -1,3 +1,9 @@
+name: Deploy Azure Enterprise Scale Landing Zone
+on:
+  push:
+      branches: [ main ]
+  workflow_dispatch:
+  
 jobs:
   deploy-management-groups:
     runs-on: [self-hosted, linux]
