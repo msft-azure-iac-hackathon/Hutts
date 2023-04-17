@@ -81,7 +81,7 @@ jobs:
         name: Processing Subscriptions and Management Groups
         id: managementGroups
         run: |
-          ./modules/managementGroups/process-management-groups-structure.ps1
+          ./modules/managementgroups/process-management-groups-structure.ps1
       
       - shell: pwsh
         name: Reading environment variables
