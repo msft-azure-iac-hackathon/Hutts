@@ -40,7 +40,7 @@ jobs:
           #Get-AzContext
           
           process-management-groups:
-    uses: ./.github/workflows/management-groups.yml
+    uses: ./.github/workflows/managementgroups.yml
     with: 
       az_powershell_min_version: ${{ vars.AZ_POWERSHELL_MIN_VERSION }}
     secrets: inherit
