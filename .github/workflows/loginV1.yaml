@@ -6,58 +6,7 @@ on:
   
 jobs:
   deploy-management-groups:
-    runs-on: [self-hosted, linux]
-
-    env:
-      az_powershell_min_version: ${{ inputs.az_powershell_min_version }}
-
-    permissions:
-      id-token: write
-      contents: read
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: azure/login@v1
-        name: Azure OIDC login
-        with:         
-          tenant-id: ${{ secrets.TENANT_ID }}
-          client-id: ${{ secrets.CLIENT_ID }}
-          allow-no-subscriptions: true
-          enable-AzPSSession: true
-      
-      - shell: pwsh
-        name: Ensure correct Az module is installed
-        run: |
-          if (Get-Module Az -ListAvailable | Where-Object { $_.Version -eq $env:az_powershell_min_version }) {
-            Write-Host "Az module version $env:az_powershell_min_version is already installed"
-            Import-Module Az -MinimumVersion $env:az_powershell_min_version
-          }
-          else {
-              Write-Host "Az module version $env:az_powershell_min_version is going to be installed"
-              Install-Module -Name Az -AllowClobber -Force -Scope CurrentUser -Repository PSGallery -MinimumVersion $env:az_powershell_min_version
-          }
-          #Get-AzContext
-          
-          process-management-groups:
     uses: ./.github/workflows/managementgroups.yaml
     with: 
       az_powershell_min_version: ${{ vars.AZ_POWERSHELL_MIN_VERSION }}
-    secrets: inherit
-
-  policy-definitions:
-    uses: ./.github/workflows/2-policy-definitions.yml
-    needs: process-management-groups
-    with: 
-      az_powershell_min_version: ${{ vars.AZ_POWERSHELL_MIN_VERSION }}
-      Hutts_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Hutts_MG_Resource_Id }}
-      Platform_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Platform_MG_Resource_Id }}
-      Connectivity_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Connectivity_MG_Resource_Id }}
-      Identity_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Identity_MG_Resource_Id }}
-      Management_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Management_MG_Resource_Id }}
-      Landing_Zones_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Landing_Zones_MG_Resource_Id }}
-      Corp_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Corp_MG_Resource_Id }}
-      Online_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Online_MG_Resource_Id }}
-      Decommisioned_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Decommisioned_MG_Resource_Id }}
-      Sandbox_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Sandbox_MG_Resource_Id }}
     secrets: inherit
