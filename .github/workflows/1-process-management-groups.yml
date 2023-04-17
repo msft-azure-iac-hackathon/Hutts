@@ -79,7 +79,7 @@ jobs:
         name: Subs and MGs
         id: managementGroups
         run: |
-          ./modules/managementGroups/process-management-groups-structure.ps1
+          ./modules/managementGroups/process-mgs.ps1
 
       - shell: pwsh
         name: Reading environment variables
