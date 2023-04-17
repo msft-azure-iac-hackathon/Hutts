@@ -6,11 +6,11 @@ on:
 
 
 jobs:
-  process-management-groups:
-    uses: ./.github/workflows/1-process-management-groups.yml
-    with: 
-      az_powershell_min_version: ${{ vars.AZ_POWERSHELL_MIN_VERSION }}
-    secrets: inherit
+  #process-management-groups:
+  #  uses: ./.github/workflows/1-process-management-groups.yml
+  #  with: 
+  #    az_powershell_min_version: ${{ vars.AZ_POWERSHELL_MIN_VERSION }}
+  #  secrets: inherit
     
   policy-definitions:
     uses: ./.github/workflows/2-policy-definitions.yml
