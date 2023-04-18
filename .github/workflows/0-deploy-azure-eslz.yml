@@ -20,7 +20,7 @@ jobs:
     with: 
       az_powershell_min_version: ${{ vars.AZ_POWERSHELL_MIN_VERSION }}
       Top_MG_Id: ${{ needs.process-management-groups.outputs.top_management_group_id }}
-      Andor_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Andor_MG_Resource_Id }}
+      Hutts_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Andor_MG_Resource_Id }}
       Platform_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Platform_MG_Resource_Id }}
       Connectivity_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Connectivity_MG_Resource_Id }}
       Identity_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Identity_MG_Resource_Id }}
@@ -37,5 +37,12 @@ jobs:
     needs: process-management-groups
     with:
       Top_Management_Group_Id: ${{ needs.process-management-groups.outputs.Top_Management_Group_Id }}
+    secrets: inherit
+
+  deploy-logging:
+    uses: ./.github/workflows/4-deploy-logging.yml
+    needs: [process-management-groups, policy-definitions]
+    with:
+      Subscription_Id: '5100271a-e3c3-4311-a839-c6d8f9b40daa'
     secrets: inherit
 
