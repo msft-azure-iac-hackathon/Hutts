@@ -34,6 +34,6 @@ jobs:
           region: westeurope
           managementgroupid: ${{ inputs.Top_Management_Group_Id }}
           template: modules\mgDiagSettings\mgDiagSettings.bicep
-          parameters: >
-            modules\mgDiagSettings\parameters\mgDiagSettings.parameters.all.json
-            parLogAnalyticsWorkspaceResourceId="${{ inputs.Top_Management_Group_Id }}"
+          #parameters: >
+          #  modules\mgDiagSettings\parameters\mgDiagSettings.parameters.all.json
+          #  parLogAnalyticsWorkspaceResourceId="${{ inputs.Top_Management_Group_Id }}"
