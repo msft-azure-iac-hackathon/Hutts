@@ -56,5 +56,6 @@ jobs:
   deploy-VNET:
     uses: ./.github/workflows/6-deploy-vnet.yml
     with:
+      Top_Management_Group_Id: ${{ needs.process-management-groups.outputs.Top_Management_Group_Id }}
       Subscription_Id: 'a1c49950-1900-406e-8f64-09ab4e0fc86a'
     secrets: inherit
