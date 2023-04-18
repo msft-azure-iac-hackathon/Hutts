@@ -6,6 +6,9 @@ on:
       Top_Management_Group_Id:
         required: true
         type: string
+      Subscription_Id:
+        required: true
+        type: string
 
 jobs:
   deploy-VNET:
