@@ -32,7 +32,7 @@ jobs:
       Sandbox_MG_Resource_Id: ${{ needs.process-management-groups.outputs.Sandbox_MG_Resource_Id }}
     secrets: inherit
 
-    deploy--VNET:
+    deploy-VNET:
     uses: ./.github/workflows/6-deploy-vnet.yml
     with:
       Subscription_Id: 'a1c49950-1900-406e-8f64-09ab4e0fc86a'
