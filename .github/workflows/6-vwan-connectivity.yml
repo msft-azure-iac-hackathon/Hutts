@@ -27,8 +27,8 @@ jobs:
           enable-AzPSSession: true
           
       - uses: azure/arm-deploy@v1
-        name: Create the Resource Group for logging
-        id: resourceGroupLogging
+        name: Deploy vwan connectivity
+        id: vwandeploying
         with:
           scope: subscription
           region: westeurope
