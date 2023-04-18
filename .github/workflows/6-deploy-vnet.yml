@@ -8,7 +8,7 @@ on:
         type: string
 
 jobs:
-  deploy-diagnostic-settings:
+  deploy-VNET:
     runs-on: [self-hosted, linux]
     
     permissions:
