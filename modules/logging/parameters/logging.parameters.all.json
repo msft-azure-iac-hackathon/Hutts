@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "parLogAnalyticsWorkspaceName": {
-      "value": "hutts-log-analytics"
+      "value": "andor-log-analytics"
     },
     "parLogAnalyticsWorkspaceLocation": {
       "value": "westeurope"
@@ -30,7 +30,7 @@
       ]
     },
     "parAutomationAccountName": {
-      "value": "hutts-automation-account"
+      "value": "andor-automation-account"
     },
     "parAutomationAccountLocation": {
       "value": "westeurope"
