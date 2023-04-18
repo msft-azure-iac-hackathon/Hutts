@@ -33,7 +33,7 @@ jobs:
           scope: managementgroup
           region: westeurope
           managementgroupid: ${{ inputs.Top_Management_Group_Id }}
-          template: orchestration\mgDiagSettingsAll\mgDiagSettingsAll.bicep
+          template: mgDiagSettings\mgDiagSettings.bicep
           parameters: >
-            orchestration\mgDiagSettingsAll\parameters\mgDiagSettingsAll.parameters.all.json
+            mgDiagSettings\parameters\mgDiagSettings.parameters.all.json
             parLogAnalyticsWorkspaceResourceId="${{ inputs.Top_Management_Group_Id }}"
