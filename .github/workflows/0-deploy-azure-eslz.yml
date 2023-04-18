@@ -43,6 +43,6 @@ jobs:
     uses: ./.github/workflows/4-deploy-logging.yml
     needs: [process-management-groups, policy-definitions]
     with:
-      Subscription_Id: 'c6e8505d-5476-4446-ae8c-a6b896339db3'
+      Subscription_Id: 'a1c49950-1900-406e-8f64-09ab4e0fc86a'
     secrets: inherit
 
