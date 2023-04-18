@@ -48,7 +48,7 @@ jobs:
 
     deploy-diagnostics:
     uses: ./.github/workflows/5-diagnostic-settings.yml
-    needs: [process-management-groups]
+    needs: process-management-groups
     with:
       Subscription_Id: 'a1c49950-1900-406e-8f64-09ab4e0fc86a'
     secrets: inherit
