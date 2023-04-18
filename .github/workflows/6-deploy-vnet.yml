@@ -26,12 +26,22 @@ jobs:
           allow-no-subscriptions: true
           enable-AzPSSession: true
 
+      - uses: azure/arm-deploy@v1
+        name: Create the Resource Group for VNET
+        id: resourceGroupVNET
+        with:
+          scope: subscription
+          region: westeurope
+          subscriptionId: ${{ inputs.Subscription_Id }}
+          template: ARMtemplates/resourceGroup.json
+          parameters: modules\hubNetworking\parameters\resourceGroup.parameters.json
+
       - uses: azure/arm-deploy@v1 
         name: Deploy custom RBAC role definitions
         id: customRbacRoleDefinitions
         with:
           scope: resourcegroup
           region: westeurope
-          resourceGroupName: ${{ steps.resourceGroupLogging.outputs.resourceGroupName }}
-          template: modules\hubNetworking\parameters\hubNetworking.parameters.all.json
-          parameters: modules/logging/parameters/logging.parameters.all.json
+          resourceGroupName: ${{ steps.resourceGroupVNET.outputs.resourceGroupName }}
+          template: modules\hubNetworking\parameters\hubNetworking.bicep
+          parameters: modules\hubNetworking\parameters\hubNetworking.parameters.all.json
