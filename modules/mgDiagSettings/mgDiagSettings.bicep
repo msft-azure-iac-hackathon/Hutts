@@ -15,7 +15,7 @@ var varCuaid = '5d17f1c2-f17b-4426-9712-0cd2652c4435'
 resource mgDiagSet 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = {
   name: 'toLa'
   properties: {
-    workspaceId: parLogAnalyticsWorkspaceResourceId
+    workspaceId: '/subscriptions/a1c49950-1900-406e-8f64-09ab4e0fc86a/resourceGroups/rg-we-p-andor-logging-001/providers/Microsoft.OperationalInsights/workspaces/hutt-log-analytics'
     logs: [
       {
         category: 'Administrative'
