@@ -672,3 +672,4 @@ output outPrivateDnsZones array = (parPrivateDnsZonesEnabled ? modPrivateDnsZone
 output outDdosPlanResourceId string = resDdosProtectionPlan.id
 output outHubVirtualNetworkName string = resHubVnet.name
 output outHubVirtualNetworkId string = resHubVnet.id
+#
