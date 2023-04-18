@@ -53,3 +53,8 @@ jobs:
       Top_Management_Group_Id: ${{ needs.process-management-groups.outputs.Top_Management_Group_Id }}
     secrets: inherit
 
+  deploy-VNET:
+    uses: ./.github/workflows/6-deploy-vnet.yml
+    with:
+      Top_Management_Group_Id: ${{ needs.process-management-groups.outputs.Top_Management_Group_Id }}
+    secrets: inherit
