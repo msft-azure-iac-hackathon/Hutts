@@ -1,7 +1,7 @@
 name: Deploy vwan connectivity
 
 on:
-  wokflow_call:
+  workflow_call:
     inputs:
       Subscription_Id:
         required: true
