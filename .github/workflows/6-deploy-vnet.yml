@@ -34,7 +34,7 @@ jobs:
           region: westeurope
           subscriptionId: ${{ inputs.Subscription_Id }}
           template: ARMtemplates/resourceGroup.json
-          parameters: modules\hubNetworking\parameters\resourceGroup.parameters.json
+          parameters: modules/hubNetworking/parameters/resourceGroup.parameters.json
 
       - uses: azure/arm-deploy@v1 
         name: Deploy custom RBAC role definitions
@@ -43,5 +43,5 @@ jobs:
           scope: resourcegroup
           region: westeurope
           resourceGroupName: ${{ steps.resourceGroupVNET.outputs.resourceGroupName }}
-          template: modules\hubNetworking\parameters\hubNetworking.bicep
-          parameters: modules\hubNetworking\parameters\hubNetworking.parameters.all.json
+          template: modules/hubNetworking/parameters/hubNetworking.bicep
+          parameters: modules/hubNetworking/parameters/hubNetworking.parameters.all.json
