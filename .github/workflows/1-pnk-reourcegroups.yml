@@ -28,7 +28,7 @@ jobs:
 
       - uses: Azure/CLI@v1
         with:
-          
+          subscription-id: ${{ inputs.Subscription_Id }}
           inlineScript: |
             #!/bin/bash
             az group delete --name 'tst-lz-tstavd-001'
