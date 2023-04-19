@@ -29,9 +29,9 @@ jobs:
       - uses: Azure/CLI@v1
         with:
           inlineScript: |
-          #!/bin/bash
-          az group delete --name 'tst-lz-tstavd-001'
-          az group delete --name 'tst-lz-tstnet-001'
-          az group delete --name pnk-test-rg1
-          az group delete --name pnk-test-rg2
-          echo "Azure resource group created"
+            #!/bin/bash
+            az group delete --name 'tst-lz-tstavd-001'
+            az group delete --name 'tst-lz-tstnet-001'
+            az group delete --name pnk-test-rg1
+            az group delete --name pnk-test-rg2
+            echo "Azure resource group removed"
