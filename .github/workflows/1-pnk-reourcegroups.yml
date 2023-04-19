@@ -6,6 +6,9 @@ on:
       Subscription_Id:
         required: true
         type: string
+      CustomerId:
+        required: true
+        type: string
 
 jobs:
   deploy-resourcegroups:
