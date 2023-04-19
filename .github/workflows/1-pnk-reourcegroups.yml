@@ -43,4 +43,4 @@ jobs:
           parameters: >
             modules/pnk/rg/resourcegroups.parameters.json 
             CustomerId=${{ inputs.CustomerId }}
-            resourceGroupLocation= ${{ inputs.Location }}
+            resourceGroupLocation=${{ inputs.Location }}
