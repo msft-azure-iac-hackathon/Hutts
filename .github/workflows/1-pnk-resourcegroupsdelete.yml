@@ -38,6 +38,6 @@ jobs:
         with:
           scope: subscription
           region: westeurope
-          mode: complete
+          deploymentMode: complete
           subscriptionId: ${{ inputs.Subscription_Id }}
           template: modules/pnk/delete/resourcegroupsdelete.json
