@@ -5,6 +5,9 @@
         "resourceGroupName": {
             "value": "pnk-test-rg1"
         },
+        "resourceGroupName1": {
+            "value": "pnk-test-rg2"
+        },
         "resourceGroupLocation": {
             "value": "westeurope"
         }

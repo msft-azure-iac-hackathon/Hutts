@@ -18,12 +18,23 @@
             "name": "[parameters('resourceGroupName')]",
             "location": "[parameters('resourceGroupLocation')]",
             "properties": {}
+        },
+        {
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2021-04-01",
+            "name": "[parameters('resourceGroupName1')]",
+            "location": "[parameters('resourceGroupLocation')]",
+            "properties": {}
         }
     ],
     "outputs": {
         "resourceGroupName": {
             "type": "string",
             "value": "[parameters('resourceGroupName')]"
+        },
+        "resourceGroupName": {
+            "type": "string",
+            "value": "[parameters('resourceGroupName1')]"
         }
     }
 }
