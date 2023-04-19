@@ -8,7 +8,7 @@ on:
         type: string
 
 jobs:
-  deploy-central-logging:
+  deploy-resourcegroups:
     runs-on: [self-hosted, linux]
     
     permissions:
