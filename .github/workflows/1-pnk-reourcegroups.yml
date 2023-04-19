@@ -9,6 +9,9 @@ on:
       CustomerId:
         required: true
         type: string
+      Location:
+        required: true
+        type: string
 
 jobs:
   deploy-resourcegroups:
@@ -40,3 +43,4 @@ jobs:
           parameters: >
             modules/pnk/rg/resourcegroups.parameters.json 
             CustomerId=${{ inputs.CustomerId }}
+            resourceGroupLocation= ${{ inputs.Location }}
