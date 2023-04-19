@@ -2,11 +2,8 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.1",
     "parameters": {
-        "resourceGroupName": {
-            "value": "pnk-test-rg1"
-        },
-        "resourceGroupName1": {
-            "value": "pnk-test-rg2"
+        "CustomerID": {
+            "value": ""
         },
         "resourceGroupLocation": {
             "value": "westeurope"
