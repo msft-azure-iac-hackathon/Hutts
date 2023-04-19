@@ -5,6 +5,9 @@
         "resourceGroupName": {
             "type": "string"
         },
+        "resourceGroupName1": {
+            "type": "string"
+        },
         "resourceGroupLocation": {
             "type": "string"
         }
