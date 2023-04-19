@@ -32,7 +32,6 @@ jobs:
         with:
           scope: subscription
           region: westeurope
-          az_powershell_min_version: ${{ vars.AZ_POWERSHELL_MIN_VERSION }}
           subscriptionId: ${{ inputs.Subscription_Id }}
           template: modules/pnk/rg/resourcegroups.json
           parameters: /modules/pnk/rg/resourcegroups.parameters.json
