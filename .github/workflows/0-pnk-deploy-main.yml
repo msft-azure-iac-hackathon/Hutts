@@ -7,14 +7,9 @@ on:
 
 jobs:
   
-  process-resource-groups:
-    uses: ./.github/workflows/1-pnk-reourcegroups.yml
-    with: 
-      az_powershell_min_version: ${{ vars.AZ_POWERSHELL_MIN_VERSION }}
-    secrets: inherit
-
   deploy-RG:
     uses: ./.github/workflows/1-pnk-reourcegroups.yml
     with:
+      az_powershell_min_version: ${{ vars.AZ_POWERSHELL_MIN_VERSION }}
       Subscription_Id: 'a1c49950-1900-406e-8f64-09ab4e0fc86a'
     secrets: inherit
