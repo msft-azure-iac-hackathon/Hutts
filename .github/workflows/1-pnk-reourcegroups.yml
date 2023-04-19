@@ -33,7 +33,7 @@ jobs:
           scope: subscription
           region: westeurope
           subscriptionId: ${{ inputs.Subscription_Id }}
-          CustomerID: ${{ inputs.CustomerID }}
+          CustomerId: ${{ inputs.CustomerID }}
           template: modules/pnk/rg/resourcegroups.json
-          parameters: modules/pnk/rg/resourcegroups.parameters.json CustomerID=CustomerID
+          parameters: modules/pnk/rg/resourcegroups.parameters.json CustomerID=CustomerId
 
