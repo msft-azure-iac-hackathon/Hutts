@@ -36,7 +36,7 @@ jobs:
         name: Create the Resource Groups
         id: resourceGroups
         with:
-          scope: resourcegroup
+          scope: tenant
           region: westeurope
           deploymentMode: complete
           subscriptionId: ${{ inputs.Subscription_Id }}
