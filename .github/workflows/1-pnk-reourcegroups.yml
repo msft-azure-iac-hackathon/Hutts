@@ -35,5 +35,5 @@ jobs:
           subscriptionId: ${{ inputs.Subscription_Id }}
           CustomerID: ${{ inputs.CustomerID }}
           template: modules/pnk/rg/resourcegroups.json
-          parameters: CustomerID=${{ inputs.CustomerID }}
+          parameters: CustomerID=CustomerID
 
