@@ -11,4 +11,5 @@ jobs:
     uses: ./.github/workflows/1-pnk-reourcegroups.yml
     with:
       Subscription_Id: 'a1c49950-1900-406e-8f64-09ab4e0fc86a'
+      CustomerID: 'pnk'
     secrets: inherit
