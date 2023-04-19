@@ -34,5 +34,5 @@ jobs:
           region: westeurope
           subscriptionId: ${{ inputs.Subscription_Id }}
           template: modules/pnk/rg/resourcegroups.json
-          parameters: /modules/pnk/rg/resourcegroups.parameters.json
+          parameters: modules/pnk/rg/resourcegroups.parameters.json
 
