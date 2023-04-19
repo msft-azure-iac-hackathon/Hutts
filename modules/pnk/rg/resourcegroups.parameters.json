@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.1",
     "parameters": {
         "CustomerID": {
-            "value": ""
+            "value": "tst"
         },
         "resourceGroupLocation": {
             "value": "westeurope"
